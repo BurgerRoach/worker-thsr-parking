@@ -20,7 +20,7 @@ module THSRParking
         def post(input)
           uri = URI.parse(POST_URL)
           header = {'Content-Type' => 'application/json'}
-          park_left = {'park_left' => input}
+          park_left = {'ParkingAvailabilities' => input}
 
           http = Net::HTTP.new(uri.host, uri.port)
           request = Net::HTTP::Post.new(uri.request_uri, header)
