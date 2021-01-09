@@ -7,3 +7,5 @@ park_left = THSRParking::THSR::Api.new.search
 result = THSRParking::THSR::Api.new.send(park_left)
 
 puts result
+
+# puts OpenSSL::SSL::SSLContext::METHODS
