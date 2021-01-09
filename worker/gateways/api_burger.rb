@@ -4,6 +4,7 @@ require 'http'
 require 'net/http'
 require 'json'
 require 'uri'
+require 'openssl'
 
 module THSRParking
   module THSR
@@ -23,6 +24,7 @@ module THSRParking
           park_left = {'ParkingAvailabilities' => input}
 
           http = Net::HTTP.new(uri.host, uri.port)
+          http.use_ssl = (uri.scheme == 'https') # for docker:run
           request = Net::HTTP::Post.new(uri.request_uri, header)
           request.body = park_left.to_json
 

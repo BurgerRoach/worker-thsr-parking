@@ -1,10 +1,30 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     declarative (0.0.20)
     declarative-option (0.1.0)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     econfig (2.1.0)
+    ffi (1.13.1)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+    http (4.4.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      http-parser (~> 1.2.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    http-parser (1.2.2)
+      ffi-compiler
     multi_json (1.15.0)
+    public_suffix (4.0.6)
+    rake (13.0.1)
     representable (3.0.4)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
@@ -12,17 +32,21 @@ GEM
     roar (1.1.0)
       representable (~> 3.0.0)
     uber (0.1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   econfig
+  http (~> 4.0)
   multi_json
   roar
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 2.7.2p83
 
 BUNDLED WITH
    2.1.4
